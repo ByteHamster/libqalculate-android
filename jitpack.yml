@@ -1,10 +1,10 @@
 jdk:
   - openjdk11
 before_install:
-   - https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.39/pcre2-10.39.tar.gz
+   - wget https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.39/pcre2-10.39.tar.gz
    - tar -xf pcre2-10.39.tar.gz
    - cd pcre2-10.39
-   - ./configure --prefix=/usr
+   - configure --prefix=/usr
    - make -j
    #- wget http://prdownloads.sourceforge.net/swig/swig-4.0.2.tar.gz
    #- tar -xf swig-4.0.2.tar.gz
