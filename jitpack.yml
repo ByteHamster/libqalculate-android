@@ -4,7 +4,8 @@ before_install:
    - wget https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.39/pcre2-10.39.tar.gz
    - tar -xf pcre2-10.39.tar.gz
    - cd pcre2-10.39
-   - configure --prefix=/usr
+   - autoconf
+   - ./configure --prefix=/usr
    - make -j
    #- wget http://prdownloads.sourceforge.net/swig/swig-4.0.2.tar.gz
    #- tar -xf swig-4.0.2.tar.gz
