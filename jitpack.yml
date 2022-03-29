@@ -2,8 +2,11 @@ jdk:
   - openjdk11
 before_install:
    - echo "a"
-   - apt install swig
-   - sudo apt install swig
+   - wget http://prdownloads.sourceforge.net/swig/swig-4.0.2.tar.gz
+   - tar -xf swig-4.0.2.tar.gz
+   - cd swig-4.0.2
+   - ./configure --prefix=/usr
+   - make -j
 install:
    - echo "Running a custom install command"
    - ./gradlew install
